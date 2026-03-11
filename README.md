@@ -9,7 +9,6 @@
 ## 📖 项目背景 (Project Background)
 在医疗物联网（WBSN）与边缘计算协同场景中，端侧物理硬件的**功耗墙**与**内存墙**是制约大规模 AI 和数据传输的核心瓶颈。本项目摒弃了传统纯数据驱动的“暴力特征堆砌”，深入微电子端侧通信的底层物理机制，通过分析 10,000 条异构传感器（ECG、血氧仪等）底层日志，构建了**具有物理学意义的效能回归预测模型**，为端侧算力分配与芯片前端能耗优化提供数据支撑。
 
-[Image of edge computing IoT architecture with sensor nodes and cloud]
 
 ## ✨ 核心创新点 (Key Features)
 
@@ -26,13 +25,13 @@
 * **Level 1**：构建基于**误差倒数加权 (Inverse RMSE Weighting)** 的线性融合 Baseline，锁死精度下限。
 * **Level 2**：重构次级特征空间，动态择优选用 **Random Forest** 作为元模型 (Meta-model)，成功捕捉基模型间的非线性互补关系。
 
-[Image of stacking ensemble machine learning architecture]
+
 
 ### 4. 🔍 基于 SHAP 的微电子效能归因 (SHAP Interpretability)
 * 引入博弈论 SHAP 框架打开模型黑盒，实现从全局到个体的特征重要性量化。
 * **关键发现**：端侧射频收发器能耗、基带处理包大小与传输持续时间是主导通信效能的最关键驱动因素，从数据层面印证了“芯片前端能量瓶颈决定整体传输效率”的硬件直觉。
 
-[Image of SHAP summary plot feature importance]
+
 
 ## 📊 最终性能表现 (Performance)
 * **评估指标**: 均方根误差 (RMSE)
